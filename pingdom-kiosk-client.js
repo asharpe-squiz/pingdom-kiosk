@@ -1,5 +1,5 @@
 // this script is run as follows:
-// # cat public/js/main.js kiosk-console.js | /opt/rh/nodejs010/root/usr/bin/node
+// # cat public/js/main.js pingdom-kiosk-console.js | /opt/rh/nodejs010/root/usr/bin/node
 
 var console = require("console");
 var io = require("socket.io-client")
@@ -12,7 +12,8 @@ var window = jsdom.jsdom().parentWindow;
 var $;
 
 // TODO gotta put the right location here
-global.location = 'http://localhost:3000/';
+//global.location = 'http://localhost:3000/';
+global.location = 'http://pingdom-status.squiz.co.uk/';
 
 // force a connection to the correct location, the subsequent connect()
 // will use the cache
